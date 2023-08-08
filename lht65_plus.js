@@ -1,6 +1,3 @@
-// Sample Payload: cbe10b68019f017fff7fff
-// Sample Payload: cc1308ec02180108d67fff
-
 // ToDo: Enable multiple base station packets on Helium Console: https://docs.helium.com/use-the-network/console/multi-packets/
 // ToDo: Enable multiple base station packets on TTN
 // ToDo: Enable multiple base station packets on Chirpstack
@@ -291,9 +288,3 @@ function Decoder(bytes, port) {
 
   return decoded;
 }
-
-// Direct node.js CLI wrapper (payload bytes and port as argument)
-// node decoder.js <payload_hex_string> <port>
-try {
-  console.log(Decoder(Buffer.from(process.argv[2], 'hex'), process.argv[3]));
-} catch (err) {}
